@@ -37,11 +37,12 @@ combined['annual_salary_adjusted'] = combined.apply(lambda row: row['annual_sala
 combined.to_csv('cache/combined.csv', index=False)
 
 #create a pivot table for average adjusted salary with full city and 'How old are you?' 
-pivot = combined.pivot_table(index=['full_city', 'How old are you?'], values='annual_salary_adjusted', aggfunc='mean')
-pivot.to_csv('cache/annual_salary_adjusted_by_location_age.csv')
+annual_salary_adjusted_by_location_age = combined.pivot_table(index=['full_city', 'How old are you?'], values='annual_salary_adjusted', aggfunc='mean')
+annual_salary_adjusted_by_location_age.to_csv('cache/annual_salary_adjusted_by_location_age.csv')
 
 #create a pivot table to show annual salary adjusted by location and education
-pivot = combined.pivot_table(index=['full_city', 'What is your highest level of education completed?'], values='annual_salary_adjusted', aggfunc='mean')
-pivot.to_csv('cache/annual_salary_adjusted_by_location_education.csv')
+annual_salary_adjusted_by_location_education = combined.pivot_table(index=['full_city', 'What is your highest level of education completed?'], values='annual_salary_adjusted', aggfunc='mean')
+annual_salary_adjusted_by_location_education.to_csv('cache/annual_salary_adjusted_by_location_education.csv')
 
-
+st.dataframe(annual_salary_adjusted_by_location_education)
+st.dataframe(annual_salary_adjusted_by_location_age)

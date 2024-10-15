@@ -39,6 +39,37 @@ def upload_file(file_name, bucket_name, object_name=None):
         return False
     return True
 
+
+
 if __name__ == '__main__':
     #TODO: Write your load code here (remove pass first)
-    pass
+    #upload the annual salary datas to S3
+    bucket_name = 'ist356ojlang'  # Replace 'yourNetID' with your actual NetID
+
+    # Upload the first file
+    file_path1 = 'cache/annual_salary_adjusted_by_location_age.csv'
+    object_name1 = 'annual_salary_adjusted_by_location_age.csv'  # S3 object name
+    upload_status1 = upload_file(file_path1, bucket_name, object_name1)
+    if upload_status1:
+        print(f"File '{file_path1}' successfully uploaded to bucket '{bucket_name}' as '{object_name1}'")
+    else:
+        print(f"File '{file_path1}' upload failed.")
+
+    # Upload the second file
+    file_path2 = 'cache/annual_salary_adjusted_by_location_education.csv'
+    object_name2 = 'annual_salary_adjusted_by_location_education.csv'  # S3 object name
+    upload_status2 = upload_file(file_path2, bucket_name, object_name2)
+    if upload_status2:
+        print(f"File '{file_path2}' successfully uploaded to bucket '{bucket_name}' as '{object_name2}'")
+    else:
+        print(f"File '{file_path2}' upload failed.")
+
+    # Upload the third file
+    file_path3 = 'cache/combined.csv'
+    object_name3 = 'combined.csv'  # S3 object name
+    upload_status3 = upload_file(file_path3, bucket_name, object_name3)
+    if upload_status3:
+        print(f"File '{file_path3}' successfully uploaded to bucket '{bucket_name}' as '{object_name3}'")
+    else:
+        print(f"File '{file_path3}' upload failed.")
+
