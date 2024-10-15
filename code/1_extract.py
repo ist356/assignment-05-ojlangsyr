@@ -21,6 +21,8 @@ for year in years:
     col_year.to_csv(f'cache/col_{year}.csv', index=False)
 
 
+#commit 3 i guesss
+#and commit 4
 
 
 st.dataframe(data)
