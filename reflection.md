@@ -22,4 +22,4 @@ Examples:
 **Best Reflection** "I learned when to use while vs for loops. While loops are for sentiel-controlled values (waiting for a condition to occur), vs for loops are for iterating over collections of fixed values."
 
 `--- Reflection Below This Line ---`
-
+I have surface layer experience with data, I took the Big Data Analytics course already. I used to use colab so it would function like a jupyter notebook, having to split up the ETL was new to me and I honestly spent a decent amount of time just understanding what I was doing conceptually. I've also never stored the data locally (cached) when working with it, I usually just load it every single time because I was not paying for colab and do not care. I had to follow along the instructions way more than I had to for previous assignments. 
